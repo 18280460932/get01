@@ -1,11 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '../views/Home.vue';
+// import Home from '../views/Home.vue';
+import redianlist from '../views/redianlist.vue';
 
 const routes = [
   {
     path: '/',
+    name: 'redianlist',
+    component: redianlist,
+  },
+  {
+    path: '/Home',
     name: 'Home',
-    component: Home,
+    // component: Home,
+    component: () => import(/* webpackChunkName: "about" */ '../views/Home.vue'),
   },
   {
     path: '/about',
