@@ -1,19 +1,35 @@
 <template>
-    <div class="">
-        <navs></navs>
+    <div class="boxs" style="">
+       <titleNav/>
+       <pindao/>
     </div>
 </template>
 <script>
-import navs from '@/components/navs.vue';
+import titleNav from '@/components/titleNav.vue';
+import pindao from '@/components/pindao.vue';
 
 export default {
   name: 'redianlist',
   components: {
-    navs,
+    titleNav,
+    pindao,
+  },
+  data() {
+    return {
+      curActive: '',
+    };
+  },
+  methods: {
+    test(e) {
+      console.log(e);
+    },
   },
 };
 </script>
 
-<style lang="sass" scoped>
-
+<style lang="scss" scoped>
+.boxs {
+  width: 500px;
+  height:100%;
+}
 </style>

@@ -1,20 +1,14 @@
 <template>
   <div class="navs" :class="{ active: isActive }">
     <a href="" @click.prevent="handleClick" class="lianjie">
-        <slot name="text"></slot>
-        <slot name="iconfont"></slot>
+        <slot></slot>
     </a>
   </div>
 </template>
 
 <script>
-// import Icon from '@/components/icon.vue';
-
 export default {
-  name: 'navs',
-  components: {
-    // Icon,
-  },
+  name: 'titles',
   props: {
     isActive: {
       type: Boolean,
@@ -42,7 +36,7 @@ export default {
 }
 .navs a {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   line-height: 46px;
   font-size: 16px;
   color: #212121;
@@ -57,8 +51,5 @@ export default {
   color: #212121;
   font-weight: 500;
   cursor: pointer;
-}
-.icon{
-    margin-right: -4px;
 }
 </style>
